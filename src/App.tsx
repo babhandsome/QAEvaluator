@@ -254,10 +254,8 @@ const App: React.FC = () => {
         );
       }
 
-      const uploadData = (await uploadResponse.json()) as {
-        upload_url: string;
-      };
-      const { upload_url } = uploadData;
+      const uploadData: any = await uploadResponse.json();
+      const upload_url = uploadData.upload_url;
       console.log("Audio uploaded successfully:", upload_url);
 
       console.log("Requesting transcription...");
@@ -288,7 +286,7 @@ const App: React.FC = () => {
         );
       }
 
-      const transcript = (await transcriptResponse.json()) as any;
+      const transcript: any = await transcriptResponse.json();
       console.log("Transcription requested, ID:", transcript.id);
 
       return await pollForTranscription(transcript.id);
@@ -320,7 +318,7 @@ const App: React.FC = () => {
           throw new Error(`Polling failed: ${response.status}`);
         }
 
-        const transcript = (await response.json()) as any;
+        const transcript: any = await response.json();
         console.log("Transcription status:", transcript.status);
 
         if (transcript.status === "completed") {
