@@ -223,8 +223,9 @@ const App: React.FC = () => {
       }
 
       setTranscript(transcriptText);
-    } catch (error) {
+    } catch (error: any) {
       console.error("Transcription failed:", error);
+      alert(`Transcription failed: ${error.message}. Please try again.`);
     } finally {
       setIsTranscribing(false);
     }
