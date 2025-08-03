@@ -1,2 +1,423 @@
-main {
+/* App.css */
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  color: white;
+}
+
+.app-header h1 {
+  margin: 0 0 10px 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.app-header p {
+  margin: 0;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Section Styles */
+section {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+}
+
+section h2 {
+  margin: 0 0 20px 0;
+  color: #1f2937;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 10px;
+}
+
+section h3 {
+  margin: 20px 0 15px 0;
+  color: #374151;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Rubric Upload Styles */
+.rubric-preview {
+  margin-top: 15px;
+  padding: 15px;
+  background: #f8fafc;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.rubric-preview h4 {
+  margin: 0 0 10px 0;
+  color: #374151;
+  font-size: 1rem;
+}
+
+.criteria-preview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.criteria-preview:last-child {
+  border-bottom: none;
+}
+
+.criteria-name {
+  font-weight: 500;
+  color: #1f2937;
+  flex: 1;
+}
+
+.criteria-score {
+  font-weight: 600;
+  color: #3b82f6;
+  margin-left: 10px;
+}
+
+.criteria-category {
+  font-size: 0.8rem;
+  color: #6b7280;
+  font-style: italic;
+  margin-left: 8px;
+}
+
+.rubric-info {
+  text-align: center;
+  padding: 20px;
+  background: #fef3c7;
+  border-radius: 8px;
+  border: 1px solid #f59e0b;
+}
+
+.info-text {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #92400e;
+}
+
+.loading-info {
+  text-align: center;
+  padding: 20px;
+  background: #dbeafe;
+  border-radius: 8px;
+  color: #1e40af;
+}
+
+/* Analysis Section Styles */
+.analysis-info {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #f0f9ff;
+  border-radius: 6px;
+  border-left: 4px solid #0ea5e9;
+}
+
+.analysis-info p {
+  margin: 5px 0;
+  color: #0c4a6e;
+}
+
+.warning-text {
+  color: #dc2626;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+/* Results Section Enhancements */
+.rubric-used {
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+.keywords-info {
+  margin-top: 8px;
+  padding: 5px 10px;
+  background: #f1f5f9;
+  border-radius: 4px;
+  border-left: 3px solid #cbd5e1;
+}
+
+.keywords-info small {
+  color: #475569;
+  font-size: 0.8rem;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.action-buttons .btn {
+  min-width: 150px;
+}
+
+/* Enhanced File Info */
+.file-info {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f3f4f6;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.upload-area:hover {
+  border-color: #9ca3af;
+}
+
+.file-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: white;
+}
+
+.file-info {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f3f4f6;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.file-info p {
+  margin: 5px 0;
+  color: #374151;
+}
+
+.audio-player {
+  width: 100%;
+  margin-top: 15px;
+}
+
+/* Button Styles */
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-primary {
+  background: #3b82f6;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+.btn-primary:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-secondary {
+  background: #6b7280;
+  color: white;
+  margin-top: 20px;
+}
+
+.btn-secondary:hover {
+  background: #4b5563;
+}
+
+/* Transcript Section */
+.transcript-result {
+  margin-top: 20px;
+}
+
+.transcript-text {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 20px;
+  white-space: pre-wrap;
+  font-family: 'Georgia', serif;
+  line-height: 1.8;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* Results Section */
+.score-summary {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 30px;
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+  border-radius: 12px;
+}
+
+.total-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.score-number {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.score-grade {
+  font-size: 1.5rem;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.score-summary p {
+  margin: 10px 0 0 0;
+  font-size: 1.1rem;
+  color: #6b7280;
+}
+
+/* Detailed Scores */
+.detailed-scores {
+  margin-top: 30px;
+}
+
+.score-item {
+  margin-bottom: 25px;
+  padding: 20px;
+  background: #fafafa;
+  border-radius: 8px;
+  border-left: 4px solid #e5e7eb;
+}
+
+.score-header {
+  display: flex;
+  justify-content: between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.score-header h4 {
+  margin: 0;
+  flex: 1;
+  color: #1f2937;
+  font-size: 1.1rem;
+}
+
+.score-points {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-left: 10px;
+}
+
+.criteria-description {
+  margin: 8px 0;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.score-feedback {
+  margin: 10px 0;
+  color: #374151;
+  font-weight: 500;
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app {
+    padding: 15px;
+  }
+
+  .app-header h1 {
+    font-size: 2rem;
+  }
+
+  .app-header p {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  .score-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .score-number {
+    font-size: 2.5rem;
+  }
+}
+
+/* Loading States */
+.btn:disabled {
+  opacity: 0.7;
+}
+
+/* Animation for processing */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.btn:disabled {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
